@@ -52,13 +52,13 @@ def adfuller_test(data):
         st.write('Non-Stationary (Fail to Reject H0)')
 
 
-# Create a dictionary to store RMSE values in their respective tabs
-rmse_values = {
-    "ARIMA": None,
-    "AutoARIMA": None,
-    "SARIMA": None,
-    "LSTM": None,
-}
+# # Create a dictionary to store RMSE values in their respective tabs
+# rmse_values = {
+#     "ARIMA": None,
+#     "AutoARIMA": None,
+#     "SARIMA": None,
+#     "LSTM": None,
+# }
 
 
 #forecast_steps = st.number_input("Enter th enumber of forecast steps ", len(test_data))
