@@ -545,6 +545,16 @@ if tabs == "SARIMA on Weekly Data":
         train_size = int(len(weekly_data) * train_test_ratio)
         train_data, test_data = weekly_data[:train_size], weekly_data[train_size:]
 
+          # Plot the data
+        plt.figure(figsize=(10, 6))
+        plt.grid(True)
+        plt.xlabel('Date')
+        plt.ylabel('Closing Price')
+        plt.plot(train_data.index, train_data, 'green', label='Train data')
+        plt.plot(test_data.index, test_data, 'blue', label='Test data')
+        plt.title(f'{ticker} Train and Test Data')
+        plt.legend()
+
         # Fit SARIMA model to weekly data
         from statsmodels.tsa.statespace.sarimax import SARIMAX
 
