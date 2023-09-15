@@ -360,6 +360,9 @@ if tabs == "ARIMA and Auto ARIMA":
         plt.plot(test_data.index, test_data, 'blue', label='Test data')
         plt.title(f'{ticker} Train and Test Data')
         plt.legend()
+        
+        # Display the plot
+        st.pyplot(plt)
 
                   
         model_autoARIMA = auto_arima(train_data, start_p=0, start_q=0,
@@ -554,6 +557,9 @@ if tabs == "SARIMA on Weekly Data":
         plt.plot(test_data.index, test_data, 'blue', label='Test data')
         plt.title(f'{ticker} Train and Test Data')
         plt.legend()
+        
+        # Display the plot
+        st.pyplot(plt)
 
         # Fit SARIMA model to weekly data
         from statsmodels.tsa.statespace.sarimax import SARIMAX
