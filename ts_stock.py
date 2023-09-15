@@ -528,7 +528,7 @@ if tabs == "SARIMA on Weekly Data":
     P_value = st.number_input("Enter the P value (seasonal order of AR):", min_value=0)
     D_value = st.number_input("Enter the D value (seasonal order of differencing):", min_value=0)
     Q_value = st.number_input("Enter the Q value (seasonal order of MA):", min_value=0)
-    seasonal_period = st.number_input("Enter the seasonal period (e.g., 7 for weekly data):", min_value=1)
+    seasonal_period = st.number_input("Enter the seasonal period:", min_value=1)
     train_test_ratio = st.slider("Select Train-Test Split Ratio:", 0.1, 0.9, 0.7)
 
     # Option to run SARIMA manually
