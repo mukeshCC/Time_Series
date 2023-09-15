@@ -558,7 +558,7 @@ if tabs == "SARIMA on Weekly Data":
         mae = mean_absolute_error(test_data, forecast)
         mse = mean_squared_error(test_data, forecast)
         rmse = math.sqrt(mse)
-        rmse_values["SARIMA"] = rmse
+        #rmse_values["SARIMA"] = rmse
 
         st.subheader("SARIMA Model Summary")
         st.write(sarima_model_fit.summary())
@@ -689,7 +689,7 @@ if tabs == "LSTM":
             mae = mean_absolute_error(y_test, predicted_stock_prices)
             mape = np.mean(np.abs((y_test - predicted_stock_prices) / y_test)) * 100
             accuracy = 100 - mape
-            rmse_values["LSTM"] = rmse
+            #rmse_values["LSTM"] = rmse
 
             comparison_df = pd.DataFrame({
                  'Actual Stock Price': y_test.flatten(),
