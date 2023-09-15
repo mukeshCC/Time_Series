@@ -414,6 +414,7 @@ if tabs == "ARIMA and Auto ARIMA":
 
 
 if tabs == "Weekly":
+            st.title("Weekly Data Analysis")    
             #Resample daily data to monthly frequency (taking the mean)
             monthly_data = data['Adj Close'].resample('W').mean()
             monthly_data = pd.DataFrame(monthly_data)
